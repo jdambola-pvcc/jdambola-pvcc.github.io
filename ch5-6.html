@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<!-- NAME: (Justin D'Ambola)
+PROG PURPOSE: This is my Chapter 5-6 assignment
+-->
+<html lang="en">
+<head>
+    <title>Chapter 5 & 6</title>
+</head>
+<body style="color: #000000; background-color: #98b4d4; font-family: Tahoma, Verdana;">
+    <h1>Chapter 5: Computer Systems Organization</h1>
+    <h1>Student: Justin D'Ambola</h1>
+    <h1>Von Neumann computer architecture, 4 major subsystems:</h1>
+    <ol>
+        <li>TThe Central Processing Unit (CPU): This subsystem is responsible for executing instructions and performing calculations. It contains a control unit that fetches instructions from memory, decodes them, and then executes them using the arithmetic and logic unit (ALU).</li>
+        <li>Memory: This subsystem stores data and instructions that are used by the CPU. It is a shared resource that is used by both the CPU and the input/output (I/O) system. In the Von Neumann architecture, memory is typically organized as a linear array of bytes, and each byte has a unique address.</li>
+        <li>Input/Output (I/O) system: This subsystem provides a way for the computer to interact with the external world. It includes devices such as keyboards, mice, displays, printers, and storage devices. In the Von Neumann architecture, the I/O system communicates with the CPU and memory through a set of input/output channels.</li>
+        <li>System Bus: This subsystem connects the CPU, memory, and I/O system and provides a means for the different subsystems to exchange data and instructions. The system bus is typically composed of three parts: the address bus, the data bus, and the control bus. The address bus is used to specify the memory location that the CPU wants to access. The data bus is used to transfer data between the CPU, memory, and I/O system. The control bus is used to coordinate the different subsystems and to signal the CPU when data is available or when an operation is complete.</li>
+    </ol>
+
+    <h1>Von Neumann computer architecture, 3 characteristics</h1>
+    <ol>
+        <li>Stored program concept: This concept means that both data and instructions are stored in the same memory, which is accessible to the CPU. This allows the computer to read, write, and execute instructions in a sequential manner, one at a time.</li>
+        <li>Sequential execution: The Von Neumann architecture executes instructions one at a time, in a sequential order, using a fetch-decode-execute cycle. The CPU fetches an instruction from memory, decodes it to understand its meaning, and then executes it using the ALU.</li>
+        <li>Single bus system: The Von Neumann architecture uses a single bus system, also known as the Von Neumann bottleneck, for communication between the CPU, memory, and I/O devices. This means that all data and instructions must pass through the same bus, which can cause delays and slow down the system.</li>
+    </ol>
+    <h1>Computer Architecture Terms</h1>
+    <ol>
+        <li>RAM: As mentioned before, RAM (Random Access Memory) is a type of computer memory that allows data to be read and written in any order, regardless of the order in which it was stored. It is a type of volatile memory, meaning that its contents are lost when the power is turned off or disrupted.</li>
+        <li>Cache: Cache is a smaller, faster memory that is used to store frequently accessed data and instructions for quick access by the CPU. It is typically located on the CPU itself or on a separate chip close to the CPU, and it operates at a faster speed than RAM.</li>
+        <li>Principle of locality: The high likelihood that when a program fetches a piece of data or an instruction: </li>
+        <ol>
+            <li>Spatial locality refers to the tendency of a program to access memory locations that are close to each other. For example, when an array is being processed, the program will likely access elements that are close to each other in memory.</li>
+            <li>Temporal locality refers to the tendency of a program to access the same memory locations repeatedly over a short period of time. For example, when a loop is being executed, the program will likely access the same set of memory locations repeatedly.</li>
+        </ol>
+        <li>ROM: ROM (Read-Only Memory) is a type of non-volatile memory that is used to store permanent data and instructions that do not need to be changed or modified. It is often used to store the computer's BIOS (Basic Input/Output System) or firmware.</li>
+        <li>Memory cell size: Memory cell size refers to the number of bits that can be stored in a single memory cell. It is typically measured in bytes, with common sizes being 8-bit, 16-bit, 32-bit, and 64-bit.</li>
+        <li>Memory cell address: Memory cell address refers to the location of a memory cell in the computer's memory. Each memory cell is assigned a unique address, which is used by the CPU to access and manipulate data stored in that cell.</li>
+        <li>Maximum memory size: Maximum memory size refers to the maximum amount of memory that a computer or device can support. This limit is determined by the hardware and can vary depending on the type of computer or device.</li>
+        <li>Register: A register is a small, high-speed memory location that is used to hold data that is currently being processed by the CPU. Registers are typically located on the CPU itself and are used to speed up processing by reducing the amount of data that needs to be read from and written to RAM.</li>
+        <li>Fetch: Fetch refers to the process of retrieving data or instructions from memory or storage and bringing it into the CPU for processing.</li>
+        <li>Store: Store refers to the process of writing data or instructions from the CPU to memory or storage for later use or retrieval.</li>
+        <li>Memory access time: Memory access time refers to the amount of time it takes for the CPU to retrieve data or instructions from memory or storage.</li>
+        <li>DASD: DASD (Direct Access Storage Device) is a term used to refer to storage devices that allow for direct access to individual data blocks or sectors, such as hard disk drives or solid-state drives.</li>
+        <li>Arithmetic and Logic Unit (ALU): The ALU is a component of the CPU that is responsible for performing arithmetic and logic operations on data. It is one of the primary functional units of the CPU.</li>
+        <li> Control Unit: The Control Unit is a component of the CPU that is responsible for coordinating and controlling the flow of data and instructions within the computer. It is responsible for fetching instructions from memory, decoding them, and executing them.</li>
+    </ol>
+    <h1>Chapter 6: </h1>
+    <h1>Four things the interface between the computer and the hardware does:</h1>
+    <ol>
+        <li>Input/output (I/O) operations: The interface allows the computer to communicate with input and output devices such as keyboards, mice, printers, and displays.</li>
+        <li>Memory access: The interface provides a means for the computer to access system memory, which stores both data and program instructions.</li>
+        <li>Interrupt handling: The interface manages the flow of interrupts, which are signals generated by hardware devices to request the attention of the processor.</li>
+        <li>Bus arbitration: The interface manages the use of the system bus, which is the pathway that connects the various hardware components within the computer. This involves coordinating access to the bus among different components to avoid conflicts and ensure that data is transferred correctly.</li>
+    </ol>
+    <h1>Responsibilities of systems software:</h1>
+    <ol>
+        <li>Resource management: Systems software manages system resources such as CPU, memory, and input/output devices. It allocates resources to different processes and ensures that each process has access to the resources it needs.</li>
+        <li>Memory management: Systems software manages memory resources by allocating and deallocating memory to different programs and processes. It also ensures that memory is used efficiently and that programs do not overwrite each other's data. </li>
+        <li>Device management: Systems software manages input /output devices such as printers, disk drives, and network adapters. It ensures that these devices are available when needed and that data is transferred correctly.</li>
+        <li>Security management: Systems software provides security features such as user authentication, access control, and data encryption. It also protects the system from viruses, malware, and other security threats.</li>
+    </ol>
+    <h1>Terms:</h1>
+    <ol>
+        <li>Systems software: A type of software that provides services and manages computer hardware to support the development and execution of other software programs. It includes operating systems, device drivers, system utilities, and other tools that support the efficient operation of a computer system.</li>
+        <li>User interface: The means by which a user interacts with a computer system, including the graphical user interface (GUI), command-line interface (CLI), and other types of interfaces that allow users to input commands and receive feedback.</li>
+        <li>Language services: Software that supports programming languages and their associated compilers, interpreters, and development environments. It includes tools for debugging, profiling, and optimizing code, as well as libraries and frameworks that simplify the development process.</li>
+        <li>Memory managers: Software that manages the allocation and deallocation of memory resources in a computer system. It includes tools for memory mapping, virtual memory, and memory protection, as well as garbage collection and other memory optimization techniques.</li>
+        <li>Information managers: Software that manages the storage and retrieval of data in a computer system, including databases, file systems, and other types of data repositories.</li>
+        <li>I/O managers: Software that manages the input and output operations of a computer system, including device drivers, file system drivers, and other types of I/O software.</li>
+        <li>Scheduler: Software that manages the allocation of system resources, including CPU time, memory, and I/O bandwidth, to different processes and threads running on a computer system.</li>
+        <li>Utilities: Software that performs specialized tasks or provides additional functionality to a computer system, including system maintenance tools, backup and recovery software, and security utilities.</li>
+        <li>Assembly language: A low-level programming language that is used to write programs that are executed directly by a computer's hardware. It uses mnemonic codes to represent machine language instructions and provides direct access to hardware resources.</li>
+    </ol>
+    <h1>Functions of an Operating System</h1>
+    <ol>
+        <li>Resource allocation: The operating system manages the allocation of hardware resources such as memory, CPU time, and input/output devices. It ensures that each program gets the resources it needs to run effectively and efficiently.</li>
+        <li>Process management: The operating system manages the creation, execution, and termination of programs. It creates and manages processes, which are instances of programs that are running, and ensures that they don't interfere with each other. </li>
+        <li>Memory management: The operating system manages the allocation and deallocation of memory for programs. It ensures that each program has access to the memory it needs and that memory is used efficiently.</li>
+        <li>User interface: The operating system provides a user interface that allows users to interact with the computer system. This includes the graphical user interface (GUI) that users see on their screens, as well as command-line interfaces that allow users to interact with the system through text commands.</li>
+    </ol>
+    </br>
+    </br>
+
+
+    <h1>Powers of Ten:</h1>
+    <table border="1" style="text-align:center;" width="800">
+        <tr style="font-weight: bold; font-size: 120%;">
+            <th>Quantity in Bytes</th>
+            <th>Base-10 Value</th>
+            <th>Amount of Textual Information</th>
+        </tr>
+        <tr>
+            <td>1 byte</td>
+            <td>10^0</td>
+            <td>One character</td>
+        </tr>
+        <tr>
+            <td>1 kilobyte</td>
+            <td>10^3</td>
+            <td>One typed page</td>
+        </tr>
+        <tr>
+            <td>1 megabyte</td>
+            <td>10^6</td>
+            <td>Two or three novels</td>
+        </tr>
+        <tr>
+            <td>1 gigabyte</td>
+            <td>10^9</td>
+            <td>A departmental library or a large personal library</td>
+        </tr>
+        <tr>
+            <td>1 terabyte</td>
+            <td>10^12</td>
+            <td>The library of a major academic research university</td>
+        </tr>
+        <tr>
+            <td>1 petabyte</td>
+            <td>10^15</td>
+            <td>All printed material in all libraries in North America</td>
+        </tr>
+        <tr>
+            <td>1 exabyte</td>
+            <td>10^18</td>
+            <td>All words ever printed throughout human history</td>
+        </tr>
+        <tr>
+            <td>1 zettabyte</td>
+            <td>10^21</td>
+            <td>As of 2014, the total amount of information stored globally on the World Wide Web was about 4–5 zettabytes</td>
+        </tr>
+        <tr>
+            <td>1 yottabyte</td>
+            <td>10^24</td>
+            <td>According to an article in Gizmodo, a design and technology blog, storing 1 yottabyte of data on hard drives would require 1 million data centers that would fill the states of Rhode Island and Delaware</td>
+        </tr>
+    </table>
+
+
+</body>
+
+
+</html>
