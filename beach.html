@@ -1,0 +1,59 @@
+<!Document html>
+<html lang="en">
+<!--
+    Name: Justin D'Ambola
+    DESCRIPTION:This code will find the cost of a beach cottage rental
+
+-->
+<head>
+    <title>Summer Breeze Beach Cottage Rentals</title>
+    <script type="text/javascript">
+        function beachrentals() {
+            //rate variables
+            var pricepernight = 250.00;
+            var salestaxrate = 0.08;
+            var occtatxrate = .12;
+            var howtopay = "\n\nCreit and debit cards accepted for beach cottage rentals";
+
+            //data variables
+            var numnights = 0;
+            var rentalcost = 0;
+            var salestaxamt = 0;
+            var occtaxamt = 0;
+            var total = 0;
+
+            //calculations
+            numnights = prompt("Enter the number of nights you would like to rent a \n SUMMER BREEZE beach cottage:")
+            rentalcost = numnights * pricepernight;
+            salestaxamt = rentalcost * salestaxrate;
+            occtaxamt = rentalcost * occtatxrate;
+            total = rentalcost + salestaxamt;
+
+            alert("\n SUMMER BREEZE BEACH COTTAGES" +
+                "\n------------------------------------------" +
+                "\nNumber of nights: " + numnights +
+                "\n------------------------------------------" +
+                "\nRental cost:    $" + rentalcost +
+                "\nSales tax:      $" + salestaxamt +
+                "\nOccupany tax:   $" + occtaxamt +
+                "\n------------------------------------------" +
+                "\nTotal:          $" + total + howtopay);
+            document.write("<h1>Total:   $" + total + "</h1>");
+        }
+     
+    </script>
+</head>
+<body style="color:#117cad; background-color:#f2ebd0;
+        font-family: Verdana, Arial, sans-serif; font-size: 15px;">
+    <h1>SUMMER BREEZE BEACCH COTTAGES</h1>
+    <h3>
+        Enjoy a beautiful, relaxing holiday in one of our cottages!
+        <br />Call us at 800.457.9876 for reservations.
+    </h3>
+    <form>
+        <input type="button" value="Click to calculate beach cottage rentals cost" class="button" onclick="beachrentals()" />
+    </form>
+    <br /><br>
+    <img src ="cottage.jpg" alt=”cottage provided by class” />
+</body>
+</html>
