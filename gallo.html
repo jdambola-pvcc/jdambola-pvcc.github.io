@@ -72,6 +72,40 @@
                 "\nSales tax:      " + dollar.format(salestaxamount) +
                 "\nTotal:          " + dollar.format(total) + howtopay);
         } //end function pizza order
+        function suborder() {
+            const HOT_ITALIAN_SUB_PRICE = 12.99;
+            const HAM_CHEESE_SUB_PRICE = 10.99;
+            const PHILLY_CHEESE_STEAK_PRICE = 12.99;
+            const SMOKED_TURKEY_SUB_PRICE = 11.99;
+            const SALES_TAX_RATE = 0.07;
+
+            let subType = parseInt(prompt("Enter:\n1. for Hot Italian Sub\n2. for Ham and Cheese Sub\n3. for Philly Cheese Steak Sub\n4. for Smoked Turkey Sub"));
+            let subQuantity = parseInt(prompt("How many subs do you want?"));
+
+            let subtotal;
+            switch (subType) {
+                case 1:
+                    subtotal = HOT_ITALIAN_SUB_PRICE * subQuantity;
+                    break;
+                case 2:
+                    subtotal = HAM_CHEESE_SUB_PRICE * subQuantity;
+                    break;
+                case 3:
+                    subtotal = PHILLY_CHEESE_STEAK_PRICE * subQuantity;
+                    break;
+                case 4:
+                    subtotal = SMOKED_TURKEY_SUB_PRICE * subQuantity;
+                    break;
+                default:
+                    alert("Invalid sub type entered.");
+                    return;
+            }
+
+            var tax = subtotal * SALES_TAX_RATE;
+            var total = subtotal + tax;
+
+            alert(`Subtotal: $${subtotal.toFixed(2)}\nTax: $${tax.toFixed(2)}\nTotal: $${total.toFixed(2)}`);
+        }
     </script>
 </head>
 
@@ -88,17 +122,43 @@
 
     </h4>
     <table border='1'>
-        <tr><td colspan ="2"><h3>Pizza Price List</h3></td></tr>
+        <tr><td colspan="2"><h3>Pizza Price List</h3></td></tr>
         <tr><td colspan="2"><img src="pizza.jpg" /></td></tr>
         <tr><td>Small    </td>    <td>$7.99</td></tr>
         <tr><td>Medium    </td>    <td>$10.99</td></tr>
         <tr><td>Large    </td>    <td>$13.99</td></tr>
         <tr><td>XLarge    </td>    <td>$17.99</td></tr>
         <tr><td>Sales Tax</td>    <td>7%     </td></tr>
-        <tr><td colspan ="2">Gallo Pizza Party:
-            <br />Order 10 or more pizzas, receive a 15% discount!</td></tr>
-        <tr><td colspan="2">
-            <form><input type="button" value="click here to order pizza" class=" button" onclick="pizzaorder()" /></form></td></tr>
+        <tr>
+            <td colspan="2">
+                Gallo Pizza Party:
+                <br />Order 10 or more pizzas, receive a 15% discount!
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form><input type="button" value="click here to order pizza" class=" button" onclick="pizzaorder()" /></form>
+            </td>
+        </tr>
+
+
+        <tr><td colspan="2"><h3>Sub Price List</h3></td></tr>
+        <tr><td colspan="2"><img src="sub.jpg" /></td></tr>
+
+        <tr><td>Hot Italian Sub</td><td>$12.99</td>
+        </tr>
+        <tr><td>Ham & Cheese Sub</td><td>$10.99</td>
+        </tr>
+        <tr><td>Philly Cheese Steak</td><td>$12.99</td>
+        </tr>
+        <tr><td>Smoked Turkey Sub</td><td>$11.99</td>
+        </tr>
+                <tr>
+            <td colspan="2">
+                <form><input type="button" value="click here to order a sub" class=" button" onclick="suborder()" /></form>
+            </td>
+        </tr>
+
     </table>
 </body>
 </html>
