@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Name: Justin D'Ambola
+  DESCRIPTION: This program will calculate tuition and fees based on the number of credits at PVCC
+-->
+<head>
+    <title>PVCC Tuition & Fees Calculator</title>
+    <style>
+        body {
+            color: #000000;
+            background-color: #ffffff;
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        table {
+            color: #ffffff;
+            background-color: #003366;
+            width: 400px;
+        }
+
+        td {
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            font-size: 1.3em;
+            font-weight: bold;
+            width: 300px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function calculateTuition() {
+            //variables
+            const dollar = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', });
+            const tuitionRate = 155.00;
+            const institutionalFeeRate = 1.75;
+            const studentActivityFeeRate = 2.90;
+            var credits = 0;
+            var tuition = 0;
+            var institutionalFee = 0;
+            var studentActivityFee = 0;
+            var total = 0;
+
+           
+            credits = document.getElementById('credits').value;
+
+           
+            if (credits == '') {
+                alert("Please enter the number of credits you are registered for.");
+                return;
+            }
+
+            //calculations
+            tuition = tuitionRate * credits;
+            institutionalFee = institutionalFeeRate * credits;
+            studentActivityFee = studentActivityFeeRate * credits;
+            total = tuition + institutionalFee + studentActivityFee;
+            document.getElementById('tuition').value = dollar.format(tuition);
+            document.getElementById('institutionalFee').value = dollar.format(institutionalFee);
+            document.getElementById('studentActivityFee').value = dollar.format(studentActivityFee);
+            document.getElementById('total').value = dollar.format(total);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h2>PVCC Tuition & Fees Calculator</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Number of Credits:</td>
+                <td><input type="number" id="credits" placeholder="Enter number of credits" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <input type="button" value="Calculate Tuition and Fees" class="button" onclick="calculateTuition()" />
+                </td>
+            </tr>
+            <tr><td><input type="reset" /></td></tr>
+            <tr style="font-weight:bold; font-size:1.2em; text-align:left;">
+                <td>Tuition:</td>
+                <td><input type="text" id="tuition" placeholder="$0.00" /></td>
+            </tr>
+            <tr style="font-weight:bold; font-size:1.2em; text-align:left;">
+                <td>Institutional Fee:</td>
+                <td><input type="text" id="institutionalFee" placeholder="$0.00" /></td>
+            </tr>
+            <tr style="font-weight:bold; font-size:1.2em; text-align:left;">
+                <td>Student Activity Fee:</td>
+                <td><input type="text" id="studentActivityFee" placeholder="$0.00" /></td>
+            </tr>
+            <tr style="font-weight:bold; font-size:1.2em; text-align:left;">
+                <td>Total:</td>
+                <td><input type="text" id="total" placeholder="$0.00" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
